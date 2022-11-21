@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter</title>
+    <style>
+        .tweet{background-color: #06141d;}
+        .in{position: relative;}
+        img{position: absolute;margin-top: -10px;margin-left: -8px;width: 1350px;}
+        input{position: absolute;border-radius: 9px;border: none;outline: none;background-color: #28343e;
+        	color: #fff;font-size: 20px;top: 92px;left: 430px;width: 541px;height: 52px;padding-left: 10px;}
+        button{height: 45px;position: absolute;top: 161px;left: 845px;width: 130px;border-radius: 23px;
+        	border: none;font-size: 16px;background-color: #1da1f2;color: #fff;}
+	a{width: 148px;height: 29px;position: absolute;top: 12px;right: 108px;background-color: #1da1f2;
+    		border-radius: 2em;color: #fff;text-align: center;text-decoration: none;padding-top: 11px;}
+    </style>
+</head>
+<body>
+    <section class="tweet">
+        <div class="in">
+            <img src="static/img/bc.png" alt="">
+	    <a href='/'>Logout</a>
+            <form action="/send" method="POST">
+                <input type="text" name="msg" placeholder="What's Happaning?" autofocus="autofocus">
+                <button id="{{ty}}" type="submit">Tweet</button>
+            </form>
+        </div>
+    </section>
+    <script>
+        var d = document.getElementById("y");
+        if (d){alert("Hello user! You send wrong word Please Change it!");}
+        var d = document.getElementById("n");
+        if (d){alert("Post Tweeted");}
+    </script>
+</body>
+</html>

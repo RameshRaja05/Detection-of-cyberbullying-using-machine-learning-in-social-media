@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        *{box-sizing: border-box;}
+        img{width: 100%;}
+        .mainbg{width: 100%;height: 100vh;padding-top: 15px;background-color: #000;opacity: .7;}
+        .mainBox{width: 750px;height: 500px;background-color: #fff;margin: auto;position: relative;border-radius: 15px;}
+        input{position: absolute;bottom: 15px;left: 25px;width: 93%;height: 40px;border-radius: 22px;
+            border: 1px solid;padding: 15px;font-size: 17px;outline: none;}
+        h3{color: #fff;text-align: center;font-size: 25px;}
+        .msg{padding-bottom: 50px;}
+        p{position: absolute;right: 30px;font-size: 21px;padding: 2px 14px;border-radius: 16px;
+            background-color: turquoise;}
+        .text{width: 750px;height: 400px;overflow: auto;position: absolute;}
+    </style>
+</head>
+<body>
+    <section class="mainbg">
+        <h3>Start Conversation Here!</h3>
+        <div class="mainBox">
+            <div class="text">
+                {% for msg in msg1 %}
+                <div class="msg">
+                    <p>{{msg}}</p>
+                </div>
+                {% endfor %}
+            </div>
+            <!-- <p>msg</p> -->
+            <form action="/send" method="POST">
+                <input type="text" name="msg" placeholder="type your text here!" autofocus="autofocus">
+            </form>
+        </div>
+    </section>
+</body>
+</html>
