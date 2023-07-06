@@ -19,7 +19,8 @@ Cyberbullying has become a significant issue in today's digital world. This proj
 To set up the project on your local machine, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/RameshRaja05/Detection-of-cyberbullying-using-machine-learning-in-social-media.git`
-2. Install the required dependencies: `pip install -r requirements.txt`
+2. Install the required dependencies: `pip install -r requirements.txt` (note if you can't find the requirements.txt file run the following command to generate a requirements.txt `pip3 freeze > requirements.txt`  # Python3
+`pip freeze > requirements.txt`  # Python2
 3. [Additional installation instructions, if any]
 
 ## Usage
@@ -29,12 +30,13 @@ To set up the project on your local machine, follow these steps:
 The dataset used for training and evaluation can be found in the `cyberbullying/Dataset.json` and `cyberbullying/cyberbullying_tweets.csv` directory. It consists of annotated social media posts labeled as either cyberbullying or non-cyberbullying. Detailed information about the dataset and its sources can be found in the Kaggle 
 
 ## Model Training
-The `main.py` script in the repository allows you to train the machine learning model and opens new tab in your browser. You can run the script with the following command: `python main.py`
+The `main.py` script in the repository allows you to train the machine learning model and opens new tab in your browser. You can run the script with the following command: `python main.py`or `flask run` or `flask -app main run`.
 
 [Additional instructions on model training, if necessary]
 
-## Evaluation
-The evaluation of the trained model can be performed using the `evaluate.py` script. Execute the script as follows: `python evaluate.py`
+## Evaluation and End Results
+You prompted with role based login type. If you are signed with admin role the you can find the evaluation metrics in graph format on the web page.
+Otherwise, You see the webpage with interface like mini social media website where you can comment or tweet your response. If your tweet or comment contains any hateful words and offensive words it prompts some warning text in the page. 
 
 [Additional details on model evaluation, if required]
 
